@@ -1,11 +1,12 @@
 # Site settings
 url: https://spgarn.github.io
 baseurl: /Dona-ana2/
-title: Fondation - Dona-ana
+title: Fondation  Dona-ana
 email: info@dona-ana.se
 description: "Charity organisation Dona-Ana."
 keywords: "your keywords, separated by commas"
-skills: "Helping women in the parts in the world where they are easily forgotten"
+skills: 'Vi hjälper kvinnor i utsatta områden med utbildning. 
+Genom utbildning skapas en långsiktig stabilitet i områden som lätt blir bortglömda. Din gåva behövs.'
 meta_author: Sundberg Anne
 
 # Google webmaster tools
@@ -26,7 +27,7 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
+  primary: 02978a #80B3FF
   primary-rgb: "24,288,156" #"128,179,255"
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
