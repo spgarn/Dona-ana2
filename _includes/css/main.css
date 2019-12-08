@@ -12,6 +12,11 @@ p {
     font-size: 20px;
 }
 
+ul {
+    font-size:18px;
+    font-weight: bold;
+}
+
 p.small {
     font-size: 16px;
 }
