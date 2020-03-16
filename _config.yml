@@ -2,7 +2,7 @@
 url: https://spgarn.github.io
 baseurl: /Dona-ana2/
 title: Fondation  Dona-ana
-email: simon@gartners.se
+email: anne.sundberg@strandridaren.se
 description: "Charity organisation Dona-Ana."
 keywords: "your keywords, separated by commas"
 skills: 'Vi hjälper kvinnor i utsatta områden med utbildning. 
@@ -35,7 +35,7 @@ color:
 # Footer settings
 footer:
   copyright: Fondation Dona-Ana
-  location: Plats
+  location: Kontakt
   social: Around the Web
   credits: Credits
 
@@ -56,6 +56,7 @@ social:
 address:
   - line: Strandridarevägen 47
   - line: Skummeslövstrand, 312 71
+  - line: 070-535 02 82
 
 # Credits content
 credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
