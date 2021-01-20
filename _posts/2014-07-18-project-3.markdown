@@ -3,7 +3,7 @@ layout: default
 modal-id: 3
 title: Naomie Tutondele
 date: 2014-07-15
-img: backup.png
+img: Naomie_Tutondele_(medicin).jpg
 alt: image-alt
 project-date: Maj 2019
 client: Medicin
