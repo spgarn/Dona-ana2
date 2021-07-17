@@ -1,4 +1,27 @@
 
+<script>
+fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFwBzzACfgEZCC0bRCCp5RNrMlCEEy1aRsvTta1xY')
+.then(json => json.json())
+.then(resp => {
+    
+     document.querySelector('#students').innerHTML = resp.items.map(item => 
+     
+     {
+         return `<div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal-${item.fields.id}" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="${item.fields.imageUrl}" style="border-radius: 2%; width: 350px; height:350px;" class="img-responsive" alt="{{ post.alt }}">
+                        </a>
+                    </div>`
+                }).join('')
+                    
+})
+</script>
+    
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
         <div class="container">
@@ -8,19 +31,7 @@
                     <hr class="star-primary">
                 </div>
             </div>
-            <div class="row">
-                {% for post in site.posts %}
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/portfolio/{{ post.img }}" style="border-radius: 2%; width: 350px; height:350px;" class="img-responsive" alt="{{ post.alt }}">
-                        </a>
-                    </div>
-                {% endfor %}
+            <div id="students" class="row">
             </div>
         </div>
     </section>
