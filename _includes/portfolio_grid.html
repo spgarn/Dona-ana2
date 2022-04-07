@@ -4,8 +4,7 @@ fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFw
 .then(json => json.json())
 .then(resp => {
     const students = resp.items.filter(item => item.sys.contentType.sys.id === 'students')
-        students.map(item => 
-     
+    document.querySelector('#students').innerHTML = students.map(item => 
      {
          return `<div class="col-sm-4 portfolio-item">
                         <a href="#portfolioModal-${item.fields.id}" class="portfolio-link" data-toggle="modal">
