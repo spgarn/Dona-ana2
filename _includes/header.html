@@ -4,13 +4,11 @@
             fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFwBzzACfgEZCC0bRCCp5RNrMlCEEy1aRsvTta1xY')
     .then(json => json.json())
     .then(resp => {
-        // console.log(resp)
         const newsLetter = resp.items.filter(item => item.sys.contentType.sys.id === 'newsLetter')
-        const doc_id = newsLetter.find(letter => letter.fields.document.sys.id)
-        console.log(doc_id)
-        asd
-        // console.log(newsLetter)
-        document.getElementById("news_letter").href = newsLetter[0].url
+        const doc_id = newsLetter[0].fields.document.sys.id
+        const doc = resp.includes.Asset.find(item => item.sys.id === doc_id)
+        const doc_url = doc.fields.file.url
+        document.getElementById("news_letter").href = doc_url
     })
         </script>
         <div class="container">

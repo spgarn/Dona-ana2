@@ -3,8 +3,8 @@
 fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFwBzzACfgEZCC0bRCCp5RNrMlCEEy1aRsvTta1xY')
 .then(json => json.json())
 .then(resp => {
-    
-     document.querySelector('#students').innerHTML = resp.items.map(item => 
+    const students = resp.items.filter(item => item.sys.contentType.sys.id === 'students')
+        students.map(item => 
      
      {
          return `<div class="col-sm-4 portfolio-item">

@@ -3,7 +3,8 @@
     fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFwBzzACfgEZCC0bRCCp5RNrMlCEEy1aRsvTta1xY')
     .then(json => json.json())
     .then(resp => {
-        resp.items.map(item => {
+        const students = resp.items.filter(item => item.sys.contentType.sys.id === 'students')
+        students.map(item => {
           const html = `
            <div key="${item.fields.id}" class="portfolio-modal modal fade" id="portfolioModal-${item.fields.id}" tabindex="-1" role="dialog" aria-hidden="true"></div>
            `
