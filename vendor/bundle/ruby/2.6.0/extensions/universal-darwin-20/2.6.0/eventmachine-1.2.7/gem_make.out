@@ -1,5 +1,5 @@
-current directory: /Users/simongartner/Desktop/Dona-ana2/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20210120-10596-1rjpc7b.rb extconf.rb
+current directory: /Users/simongartner/Desktop/Random/Dona-ana/Dona-ana2/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20210324-34183-16e190.rb extconf.rb
 checking for -lcrypto... *** extconf.rb failed ***
 Could not create Makefile due to some reason, probably lack of necessary
 libraries and/or headers.  Check the mkmf.log file for more details.  You may
@@ -52,6 +52,6 @@ You have to install development tools first.
 
 To see why this extension failed to compile, please check the mkmf.log which can be found here:
 
-  /Users/simongartner/Desktop/Dona-ana2/vendor/bundle/ruby/2.6.0/extensions/universal-darwin-20/2.6.0/eventmachine-1.2.7/mkmf.log
+  /Users/simongartner/Desktop/Random/Dona-ana/Dona-ana2/vendor/bundle/ruby/2.6.0/extensions/universal-darwin-20/2.6.0/eventmachine-1.2.7/mkmf.log
 
 extconf failed, exit code 1
