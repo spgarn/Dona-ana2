@@ -1,5 +1,12 @@
     <!-- Header -->
     <header>
+        <script>
+            fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFwBzzACfgEZCC0bRCCp5RNrMlCEEy1aRsvTta1xY')
+    .then(json => json.json())
+    .then(resp => {
+        document.getElementById("news_letter").href = console.log(resp.asset[0].file.url)
+    })
+        </script>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -9,7 +16,7 @@
                         <hr class="star-primary">
                         <span class="skills">{{ site.skills }}</span>
                     </div>
-                    <div style="padding-top: 100px;"><a href="../21 03 01  DONAANA.pdf" target="_blank"><img style="height:100px;" src="../newspaper.svg"/>Läs det senaste nyhetsbladet</a></div>
+                    <div style="padding-top: 100px;"><a id="news_letter"  target="_blank"><img style="height:100px;" src="../newspaper.svg"/>Läs det senaste nyhetsbladet</a></div>
                 </div>
             </div>
         </div>
