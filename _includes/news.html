@@ -1,4 +1,44 @@
 <!-- News section -->
+<script>
+
+fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFwBzzACfgEZCC0bRCCp5RNrMlCEEy1aRsvTta1xY')
+.then(json => json.json())
+.then(resp => {
+    const news = resp.items.filter(item => item.sys.contentType.sys.id === 'news')
+    news.forEach((item,i) =>  {
+        // <img id="image1${i}" class="imageNews"   alt="">
+        // <img id="image2${i}" class="imageNews"   alt=""> 
+        html = `
+                <h3 style="width: 100%;">${item.fields.title}</h3>
+                ${item.fields.description} 
+                <div id="imageDiv${i}" class="imageNewsDiv">
+                </div>`
+                const node = document.createElement("div")
+                node.className="col-lg-12 text-center";
+            node.innerHTML = html;
+                document.getElementById('news').appendChild(node) 
+        if(item.fields.images) {
+        const doc_ids = item.fields.images.map(image => image.sys.id)
+        const doc1 = resp.includes.Asset.find(item => item.sys.id === doc_ids[0])
+        const doc2 = resp.includes.Asset.find(item => item.sys.id === doc_ids[1])
+        const doc_url1 = doc1.fields.file.url
+        const node1 = document.createElement("img")
+        node1.className="imageNews"
+        node1.alt=''
+        document.getElementById(`imageDiv${i}`).appendChild(node1).src = doc_url1
+        if(doc2){
+        const doc_url2 = doc2.fields.file.url
+        const node2 = document.createElement("img")
+        node2.className="imageNews"
+        node2.alt=''
+        document.getElementById(`imageDiv${i}`).appendChild(node2).src = doc_url2
+        }
+     }})
+    
+   
+})
+</script>
+
 <section id="news">
     <div class="container">
         <div class="row">
@@ -7,24 +47,8 @@
                 <hr class="star-primary">
             </div>
         </div>
-        <div class="row" style="text-align: center;">
-            <div class="col-lg-4 col-lg-offset-2" >
-                <h3 style="width: 100%;">Senaste Studenten!</h3>
-                <h5>Dulcie Kavundi är våran senaste student. Hon har nu kommit igång med studierna. För att underlätta
-                    detta har hon fått en begagnad laptop samt en solcellslampa.</h5>
-                <div class="imageNewsDiv">
-                <img class="imageNews"  src="img/Dulcie-Kavundi.jpg" alt="">
-                <img class="imageNews"  src="img/Dulce.jpg" alt="">
-            </div>
-            </div>
-            <div class="col-lg-4 col-lg-offset-2">
-                <h3>Internationella kvinnodagen</h3>
-                <h5>Fira Internationella kvinnodagen den 8 mars med att uppskatta och fira en kvinna som du tänker på
-                    med en gåva till Fondation Dona Ana.
-                    Swisha till 123 169 84 63 eller girera till bankgiro 5458-8231.
-                    Fondation Dona Ana arbetar med utbildning av flickor till ett yrkesliv. Du kan läsa mer på vår
-                    hemsida www.dona-ana.nu.</h5>
-            </div>
+        <div id="news" class="row" style="text-align: center;">
+           
         </div>
         </div>
     </div>
