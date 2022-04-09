@@ -6,8 +6,6 @@ fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFw
 .then(resp => {
     const news = resp.items.filter(item => item.sys.contentType.sys.id === 'news')
     news.forEach((item,i) =>  {
-        // <img id="image1${i}" class="imageNews"   alt="">
-        // <img id="image2${i}" class="imageNews"   alt=""> 
         html = `
                 <h3 style="width: 100%;">${item.fields.title}</h3>
                 ${item.fields.description} 
@@ -16,7 +14,7 @@ fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFw
                 const node = document.createElement("div")
                 node.className="col-lg-12 text-center";
             node.innerHTML = html;
-                document.getElementById('news').appendChild(node) 
+                document.getElementById('newsitems').appendChild(node) 
         if(item.fields.images) {
         const doc_ids = item.fields.images.map(image => image.sys.id)
         const doc1 = resp.includes.Asset.find(item => item.sys.id === doc_ids[0])
@@ -47,7 +45,7 @@ fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFw
                 <hr class="star-primary">
             </div>
         </div>
-        <div id="news" class="row" style="text-align: center;">
+        <div id="newsitems" class="row" style="text-align: center;">
            
         </div>
         </div>
