@@ -6,14 +6,14 @@
         const students = resp.items.filter(item => item.sys.contentType.sys.id === 'students')
         students.map(item => {
           const html = `
-           <div key="${item.fields.id}" class="portfolio-modal modal fade" id="portfolioModal-${item.fields.id}" tabindex="-1" role="dialog" aria-hidden="true"></div>
+           <div key="${item.sys.id}" class="portfolio-modal modal fade" id="portfolioModal-${item.sys.id}" tabindex="-1" role="dialog" aria-hidden="true"></div>
            `
            const node = document.createElement("div");
            node.innerHTML = html;
            document.getElementById("wrapper").appendChild(node)
 
-        const s = document.querySelector(`#portfolioModal-${item.fields.id}`).innerHTML = `
-        <div key=${item.fields.id + 50} class="modal-content">
+        const s = document.querySelector(`#portfolioModal-${item.sys.id}`).innerHTML = `
+        <div key=${item.sys.id} class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
                     <div class="rl">
