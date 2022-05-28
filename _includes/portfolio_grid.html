@@ -6,7 +6,7 @@ fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFw
     const students = resp.items.filter(item => item.sys.contentType.sys.id === 'students')
     document.querySelector('#students').innerHTML = students.map((item,i) => 
      {
-        const doc_id = students[i]?.fields?.document?.sys?.id
+        const doc_id = students[i]?.fields?.image?.sys?.id
         const doc = resp?.includes?.Asset?.find(item => item?.sys?.id === doc_id)
         const doc_url = doc?.fields?.file?.url
          return `<div class="col-sm-4 portfolio-item">
