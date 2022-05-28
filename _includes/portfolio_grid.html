@@ -4,8 +4,11 @@ fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFw
 .then(json => json.json())
 .then(resp => {
     const students = resp.items.filter(item => item.sys.contentType.sys.id === 'students')
-    document.querySelector('#students').innerHTML = students.map(item => 
+    document.querySelector('#students').innerHTML = students.map((item,i) => 
      {
+        const doc_id = students[i]?.fields?.document?.sys?.id
+        const doc = resp?.includes?.Asset?.find(item => item?.sys?.id === doc_id)
+        const doc_url = doc?.fields?.file?.url
          return `<div class="col-sm-4 portfolio-item">
                         <a href="#portfolioModal-${item.sys.id}" class="portfolio-link" data-toggle="modal">
                             <div class="caption">
@@ -13,7 +16,7 @@ fetch('https://cdn.contentful.com/spaces/w3jh9m85pbur/entries?access_token=IHcFw
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="${item.fields.imageUrl}" style="border-radius: 2%; width: 350px; height:350px;" class="img-responsive" alt="{{ post.alt }}">
+                            <img src="${doc_url || item.fields.imageUrl}" style="border-radius: 2%; width: 350px; height:350px;" class="img-responsive" alt="{{ post.alt }}">
                         </a>
                     </div>`
                 }).join('')
