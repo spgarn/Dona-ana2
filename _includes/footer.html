@@ -2,7 +2,7 @@
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
-                <div class="row">
+                <div class="row-footer">
                     <div class="footer-col col-md-4">
                         <h3>{{ site.footer.location }}</h3>
                         <p>
@@ -11,20 +11,23 @@
 		                    {% endfor %}
                         </p>
                     </div>
-                    <!-- <div class="footer-col col-md-4">
-                        <h3>{{ site.footer.social }}</h3>
+                     <div class="footer-col col-md-4">
+                        <h3>FÖLJ OSS</h3>
                         <ul class="list-inline">
                             {% for network in site.social %}
                             <li>
-                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                                <a href="{{ network.url }}" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
                             </li>
 		                    {% endfor %}
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>{{ site.footer.credits }}</h3>
-                        <p>{{ site.credits }}</p>
-                    </div> -->
+                        <h3>Bidrag</h3>
+                        <p>Swish:  <br>123 169 8463</p>
+                        <p>Bankgironummer:  5458-8231</p>
+                        <p style="font-style: italic; font-weight: bold;">Obs! Vi finns även på: <a href="https://pennybridge.org/sv/causes/Insamlingsstiftelsen_Fondation_Dona_Ana?fbclid=IwAR1unJawWZ8QpCUZi-PxjMZqL2w6bfgWQR40azDy5vaAqcLLxMB7lhjDm3c" target="_blank">Pennybridge</a></p>
+                        <!-- <p><img style="width: 250px" src="img/swish.png"> </p> -->
+                    </div>
                 </div>
             </div>
         </div>

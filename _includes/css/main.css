@@ -10,11 +10,13 @@ body {
 
 p {
     font-size: 20px;
+    color:black
 }
 
 ul {
     font-size:18px;
     font-weight: bold;
+    color: black;
 }
 
 p.small {
@@ -39,6 +41,7 @@ h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    color: black
 }
 
 hr.star-light,
@@ -50,6 +53,17 @@ hr.star-primary {
     border-top: solid 5px;
     text-align: center;
     overflow: visible;
+}
+
+.row-footer {
+display: flex;
+flex-direction: row;
+}
+
+@media(max-width:768px) {
+.row-footer {
+flex-direction: column;
+        }
 }
 
 hr.star-light:after,
@@ -112,6 +126,7 @@ header .intro-text .name {
 header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
+    color:black;
 }
 
 @media(min-width:768px) {
@@ -464,7 +479,6 @@ footer .footer-below {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     margin-top: 1rem;
     gap:50px
 }
