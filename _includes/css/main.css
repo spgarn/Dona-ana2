@@ -200,6 +200,8 @@ section h2 {
     font-size: 3em;
 }
 
+
+
 section.success {
     color: #fff;
     background: #{{ site.color.primary }};
@@ -212,6 +214,11 @@ section.success {
 
     section.first {
         padding-top: 75px;
+    }
+
+    section h2 {
+        margin: 0;
+        font-size: 2.4em;
     }
 }
 
@@ -481,6 +488,12 @@ footer .footer-below {
     flex-direction: row;
     margin-top: 1rem;
     gap:50px
+}
+
+@media(max-width:767px) {
+    .imageNewsDiv {
+       gap:8px
+    }
 }
 
 /* Fix modal mouse wheel issues */
